@@ -1,21 +1,42 @@
-import { Routes, Route } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Process from './pages/Process';
-import Contact from './pages/Contact';
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="services" element={<Services />} />
-        <Route path="process" element={<Process />} />
-        <Route path="contact" element={<Contact />} />
-      </Route>
-    </Routes>
-  );
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-export default App;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
