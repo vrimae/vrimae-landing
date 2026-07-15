@@ -17,7 +17,7 @@ const staggerContainer = {
   }
 };
 
-const TimelineStep = ({ icon, title, desc, stepNum, isLast }: { icon: React.ReactNode, title: string, desc: string, stepNum: number, isLast?: boolean }) => {
+const TimelineStep = ({ icon, title, desc, isLast }: { icon: React.ReactNode, title: string, desc: string, isLast?: boolean }) => {
   return (
     <motion.div className="timeline-item" variants={fadeInUp}>
       <div className="timeline-marker">
@@ -57,25 +57,21 @@ export default function Process() {
         variants={staggerContainer}
       >
         <TimelineStep 
-          stepNum={1}
           icon={<Search size={28} />}
           title={`${t('process.step')} 1:${processData[0].title}`}
           desc={processData[0].desc}
         />
         <TimelineStep 
-          stepNum={2}
           icon={<PenTool size={28} />}
           title={`${t('process.step')} 2:${processData[1].title}`}
           desc={processData[1].desc}
         />
         <TimelineStep 
-          stepNum={3}
           icon={<Code size={28} />}
           title={`${t('process.step')} 3:${processData[2].title}`}
           desc={processData[2].desc}
         />
         <TimelineStep 
-          stepNum={4}
           icon={<Rocket size={28} />}
           title={`${t('process.step')} 4:${processData[3].title}`}
           desc={processData[3].desc}
