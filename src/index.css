@@ -327,6 +327,7 @@ a {
   letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
   animation: slideUp 0.8s ease-out;
+  color: #38bdf8; /* Blue color as requested */
 }
 
 .hero-subtitle {
