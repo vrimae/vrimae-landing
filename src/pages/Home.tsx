@@ -48,7 +48,6 @@ export default function Home() {
           <motion.p className="hero-subtitle" variants={fadeInUp} dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }} />
           <motion.div className="hero-cta" variants={fadeInUp}>
             <Link to="/contact" className="btn btn-primary btn-large group">
-              <MessageCircle className="icon-medium" />
               {t('hero.consultation')}
               <ArrowRight className="icon-arrow group-hover" />
             </Link>
