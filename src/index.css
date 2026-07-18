@@ -398,7 +398,7 @@ a {
 }
 
 .section-header {
-  text-align: center; /* centering again if they prefer, but wait, they said to add thin gray line to others. */
+  text-align: left;
   margin: 0 auto 3rem auto;
   max-width: 900px;
   background: #ffffff;
@@ -421,7 +421,7 @@ a {
   font-size: 1.125rem;
   color: var(--color-text-muted);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.6;
 }
 
