@@ -256,12 +256,13 @@ a {
 
 .aurora-line {
   position: absolute;
-  filter: blur(40px);
-  opacity: 0.8;
-  border-radius: 100%;
+  filter: blur(50px);
+  opacity: 0.9;
+  border-radius: 0;
   mix-blend-mode: multiply;
   animation: aurora-flow 15s infinite alternate ease-in-out;
   will-change: transform, opacity;
+  z-index: -1;
 }
 
 /* Extreme optimization for low-end mobile devices */
@@ -272,33 +273,17 @@ a {
 }
 
 .aurora-1 {
-  background: linear-gradient(90deg, #7c3aed, #9333ea);
-  width: 65%;
-  height: 20%;
-  top: 10%;
-  left: -5%;
-  transform: rotate(-15deg);
+  background: linear-gradient(90deg, 
+    rgba(147, 51, 234, 1) 0%, 
+    rgba(147, 51, 234, 0.3) 50%, 
+    rgba(147, 51, 234, 1) 100%
+  );
+  width: 120%;
+  height: 250px;
+  bottom: -50px;
+  left: -10%;
+  transform: rotate(0deg);
   animation-delay: 0s;
-}
-
-.aurora-2 {
-  background: linear-gradient(90deg, #6d28d9, #7c3aed);
-  width: 75%;
-  height: 18%;
-  top: 40%;
-  right: -15%;
-  transform: rotate(20deg);
-  animation-delay: -5s;
-}
-
-.aurora-3 {
-  background: linear-gradient(90deg, #5b21b6, #8b5cf6);
-  width: 60%;
-  height: 25%;
-  bottom: 20%;
-  left: 10%;
-  transform: rotate(-10deg);
-  animation-delay: -7s;
 }
 
 @keyframes aurora-flow {
