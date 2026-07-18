@@ -6,7 +6,7 @@ export const en = {
     contact: "Consultation",
     contact_btn: "Contact",
     demo_btn: "View Demo",
-    demo_pos_btn: "View POS Demo"
+    demo_pos_btn: "View AiPOS Demo"
   },
   hero: {
     badge: "Software House & Custom Web Development",
@@ -33,12 +33,12 @@ export const en = {
     portfolio_title_1: "See the Quality of ",
     portfolio_title_2: "Our Work",
     portfolio_title_3: "Directly",
-    portfolio_desc: "As an example of our capabilities, please try the **POS & Analytics System** demo that we have developed.",
+    portfolio_desc: "As an example of our capabilities, please try the **AiPOS & Analytics System** demo that we have developed.",
     portfolio_list_1: "Responsive and modern interface",
     portfolio_list_2: "Real cashier transaction simulation",
     portfolio_list_3: "Interactive data analytics dashboard",
     portfolio_list_4: "Examples of features you can custom order",
-    portfolio_btn: "Explore Our POS Demo →",
+    portfolio_btn: "Explore Our AiPOS Demo →",
     portfolio_note: "This is just the initial foundation. We can add any feature you want! 🚀",
     portfolio_card_label: "SYSTEM EXAMPLE",
     portfolio_card_unit: "& Retail",
@@ -58,7 +58,7 @@ export const en = {
     faq_title: "Frequently Asked Questions (FAQ)",
     faq_desc: "Some things clients often ask us.",
     faqs: [
-      { q: "How long is the custom application development process?", a: "Development time varies greatly depending on the number and complexity of features. A standard company profile website usually takes 1-2 weeks, while a custom ERP/POS system can take 1-3 months. We will provide a definitive timeline in the proposal." },
+      { q: "How long is the custom application development process?", a: "Development time varies greatly depending on the number and complexity of features. A standard company profile website usually takes 1-2 weeks, while a custom ERP/AiPOS system can take 1-3 months. We will provide a definitive timeline in the proposal." },
       { q: "Will I get ownership rights to the application?", a: "Yes, after all payments are completed according to the cooperation contract, you have full rights to use the application for your business interests." },
       { q: "What if there's an error after the application is delivered?", a: "We provide a free maintenance warranty period after launch. If there is a system error (bug), our support team will fix it immediately." }
     ]
@@ -90,7 +90,7 @@ export const en = {
         eff: "Unifying HR, Finance, and operational divisions in one centralized ecosystem, cutting manual processes by up to 80%."
       },
       {
-        title: "E-Commerce & Retail POS",
+        title: "E-Commerce & Retail AiPOS",
         front: "Increase your sales conversions through an online store platform and smart cashier directly integrated with inventory management.",
         tech: "Using a distributed database to serve thousands of concurrent transactions (High Concurrency) without the risk of down-time during flash sales.",
         eff: "Automatic integration to national payment gateways and logistics couriers, turning the shopper's experience into a seamless one."
@@ -154,9 +154,9 @@ export const en = {
   mockup: {
     title: "Vrimae Digital – Custom Web & SaaS",
     subtitle: "Complete digital ecosystem with stunning premium interfaces.",
-    desc: "We build systems from scratch, ranging from fast and interactive *company profiles* (like the one on the left screen), to complex *enterprise*-scale *dashboards* (like the POS/Cashier system on the right screen). All integrated into one platform with high-standard design quality.",
+    desc: "We build systems from scratch, ranging from fast and interactive *company profiles* (like the one on the left screen), to complex *enterprise*-scale *dashboards* (like the AiPOS/Cashier system on the right screen). All integrated into one platform with high-standard design quality.",
     badge_1: "Exclusive Custom Websites",
-    badge_2: "Smart POS / Cashier Apps",
+    badge_2: "Smart AiPOS / Cashier Apps",
     badge_3: "Highly Responsive Design",
     badge_4: "Modern Design System"
   },
@@ -166,7 +166,7 @@ export const en = {
     company: "Company",
     resources: "Resources",
     web_dev: "Web Development",
-    pos: "POS System",
+    pos: "AiPOS System",
     inventory: "Inventory Management",
     ecommerce: "E-Commerce",
     mobile: "Mobile Apps",

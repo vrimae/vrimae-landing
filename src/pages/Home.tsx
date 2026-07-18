@@ -175,7 +175,7 @@ export default function Home() {
             <div className="trial-card-header">
               <span className="trial-free-label">{t('home.portfolio_card_label')}</span>
               <div className="trial-days" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <span className="trial-days-num" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>POS</span>
+                <span className="trial-days-num" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>AiPOS</span>
                 <span className="trial-days-unit" style={{ fontSize: '1.2rem' }}>{t('home.portfolio_card_unit')}</span>
               </div>
               <p>{t('home.portfolio_card_desc')}</p>
