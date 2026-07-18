@@ -174,13 +174,12 @@ a {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: #0f172a;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
-  transform: translateY(-2px);
+  background-color: #1e293b;
 }
 
 .btn-glass {
@@ -482,15 +481,19 @@ a {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 0;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
   transition: var(--transition);
+  margin-bottom: 1rem;
 }
 
 .reasons-grid .reason-card:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .reason-card:hover {
@@ -1078,8 +1081,8 @@ a {
 .faq-item {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 24px;
+  padding: 1.5rem 2rem;
   transition: var(--transition);
 }
 
@@ -1166,13 +1169,13 @@ a {
 .review-card {
   flex: 0 0 calc(33.333% - 1rem);
   min-width: 320px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 32px;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -1775,12 +1778,13 @@ a {
   width: 340px;
   flex-shrink: 0;
   background: rgba(255, 255, 255, 0.4);
+  background-image: radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 60%), radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 32px;
+  padding: 2.5rem;
 }
 
 .trial-card-header {
