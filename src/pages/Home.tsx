@@ -1,11 +1,11 @@
 import { ArrowRight, Star, MessageCircle, Zap, HeartHandshake, Shield } from 'lucide-react';
-import HeroMockup from '../components/HeroMockup';
+import Hero3DShowcase from '../components/Hero3DShowcase';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ReviewSection from '../components/ReviewSection';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Animation variants — lightweight, no blur
+// Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' as const } }
@@ -48,10 +48,8 @@ export default function Home() {
           </motion.div>
         </motion.div>
         
-        {/* Dashboard Mockup / Illustration */}
-        <div>
-          <HeroMockup />
-        </div>
+        {/* 3D Dashboard Mockup / Showcase */}
+        <Hero3DShowcase />
       </section>
 
       {/* About / Introduction Section */}
