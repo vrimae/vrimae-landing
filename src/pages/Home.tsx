@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import ReviewSection from '../components/ReviewSection';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Animation variants
+// Animation variants — lightweight, no blur
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40, filter: 'blur(8px)' },
-  visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' as const } }
 };
 
 const staggerContainer = {
@@ -16,7 +16,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1
     }
   }
 };
@@ -57,13 +57,9 @@ export default function Home() {
         </motion.div>
         
         {/* Dashboard Mockup / Illustration */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <div>
           <HeroMockup />
-        </motion.div>
+        </div>
       </section>
 
       {/* About / Introduction Section */}
@@ -95,9 +91,9 @@ export default function Home() {
           <p>{t('home.start_desc')}</p>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} style={{ display: 'inline-block' }}>
+          <div style={{ display: 'inline-block' }}>
             <Link to="/services" className="btn btn-outline btn-large">{t('home.start_btn')}</Link>
-          </motion.div>
+          </div>
         </div>
       </motion.section>
 
@@ -121,7 +117,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-50px" }}
           variants={staggerContainer}
         >
-          <motion.div className="reason-card" variants={fadeInUp} whileHover={{ scale: 1.02 }}>
+          <motion.div className="reason-card" variants={fadeInUp}>
             <div className="reason-icon"><Zap size={28} /></div>
             <div className="reason-content">
               <h3>{t('home.why_1_title')}</h3>
@@ -169,20 +165,18 @@ export default function Home() {
               <li><span className="check">✓</span> {t('home.portfolio_list_3')}</li>
               <li><span className="check">✓</span> {t('home.portfolio_list_4')}</li>
             </ul>
-            <motion.a
+            <a
               href="https://matcha-saas-demo.vercel.app"
               target="_blank"
               rel="noreferrer"
               className="btn btn-primary btn-large trial-cta"
-              whileHover={{ scale: 1.02 }} 
-              whileTap={{ scale: 0.98 }}
             >
               {t('home.portfolio_btn')}
-            </motion.a>
+            </a>
             <p className="trial-note">{t('home.portfolio_note')}</p>
           </motion.div>
 
-          <motion.div className="trial-card" variants={fadeInUp} whileHover={{ y: -5 }}>
+          <motion.div className="trial-card" variants={fadeInUp}>
             <div className="trial-card-header">
               <span className="trial-free-label">{t('home.portfolio_card_label')}</span>
               <div className="trial-days" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -197,16 +191,15 @@ export default function Home() {
                 <div key={f} className="trial-card-feature">{f}</div>
               ))}
             </div>
-            <motion.a
+            <a
               href="https://matcha-saas-demo.vercel.app"
               target="_blank"
               rel="noreferrer"
               className="btn btn-primary"
               style={{ width: '100%', marginTop: '1.5rem', textAlign: 'center' }}
-              whileHover={{ scale: 1.02 }}
             >
               {t('home.portfolio_card_btn')}
-            </motion.a>
+            </a>
           </motion.div>
         </div>
       </motion.section>
@@ -225,9 +218,9 @@ export default function Home() {
           <p>{t('home.pricing_desc')}</p>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} style={{ display: 'inline-block' }}>
+          <div style={{ display: 'inline-block' }}>
             <Link to="/contact" className="btn btn-outline btn-large">{t('home.pricing_btn')}</Link>
-          </motion.div>
+          </div>
         </div>
       </motion.section>
 
