@@ -115,46 +115,47 @@ export default function Layout() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="mobile-nav-dropdown"
               style={{
                 position: 'absolute',
-                top: '100%',
-                left: 0,
-                right: 0,
-                background: 'var(--color-surface)',
+                top: 'calc(100% + 0.5rem)',
+                left: '1rem',
+                right: '1rem',
+                background: 'rgba(255, 255, 255, 0.85)',
                 padding: '1.5rem',
-                borderBottom: '1px solid var(--color-border)',
+                border: '1px solid rgba(255, 255, 255, 0.8)',
+                borderRadius: '24px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem',
-                boxShadow: 'var(--glass-shadow)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
+                gap: '1.25rem',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
+                backdropFilter: 'saturate(180%) blur(24px)',
+                WebkitBackdropFilter: 'saturate(180%) blur(24px)',
                 zIndex: 100
               }}
             >
-              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem' }}>{t('navbar.home')}</Link>
-              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem' }}>{t('navbar.services')}</Link>
-              <Link to="/process" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem' }}>{t('navbar.process')}</Link>
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem' }}>{t('navbar.contact')}</Link>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '0.5rem' }}>
-                <span style={{ fontWeight: 500, color: 'var(--color-text)' }}>Bahasa / Language</span>
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', padding: '0.5rem 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>{t('navbar.home')}</Link>
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', padding: '0.5rem 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>{t('navbar.services')}</Link>
+              <Link to="/process" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', padding: '0.5rem 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>{t('navbar.process')}</Link>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--color-text)', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem', padding: '0.5rem 0', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>{t('navbar.contact')}</Link>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 0' }}>
+                <span style={{ fontWeight: 600, color: 'var(--color-text)' }}>Language</span>
                 <button 
                   onClick={() => {
                     setLanguage(language === 'id' ? 'en' : 'id');
                     setIsMobileMenuOpen(false);
                   }}
-                  className="btn btn-outline"
-                  style={{ padding: '0.4rem 1rem', fontWeight: 'bold' }}
+                  className="btn"
+                  style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '12px', padding: '0.5rem 1rem', fontWeight: 'bold' }}
                 >
                   {language === 'id' ? 'ID 🇮🇩' : 'EN 🇬🇧'}
                 </button>
               </div>
-              <a href="https://matcha-saas-demo.vercel.app" className="btn btn-outline" target="_blank" rel="noreferrer" onClick={() => setIsMobileMenuOpen(false)} style={{ textAlign: 'center', marginTop: '1rem' }}>{t('navbar.demo_pos_btn')}</a>
+              <a href="https://matcha-saas-demo.vercel.app" className="btn btn-primary" target="_blank" rel="noreferrer" onClick={() => setIsMobileMenuOpen(false)} style={{ textAlign: 'center', marginTop: '0.5rem', width: '100%', borderRadius: '16px' }}>{t('navbar.demo_pos_btn')}</a>
             </motion.div>
           )}
         </AnimatePresence>

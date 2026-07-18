@@ -29,8 +29,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero" style={{ paddingTop: 'var(--space-xl)', paddingBottom: 'var(--space-lg)' }}>
         <div className="hero-background">
-          <div className="glow glow-1"></div>
-          <div className="glow glow-2"></div>
         </div>
         <motion.div 
           className="hero-content"
@@ -147,7 +145,7 @@ export default function Home() {
         viewport={{ once: true, margin: "-50px" }}
         variants={staggerContainer}
       >
-        <div className="trial-glow" />
+
         <div className="trial-inner">
           <motion.div className="trial-text" variants={fadeInUp}>
 
