@@ -12,7 +12,7 @@ export const id = {
     badge: "Software House & Custom Web Development",
     title_1: "Wujudkan Sistem & Website",
     title_2: "Impian Bisnis Anda.",
-    subtitle: "Di Vrimae, kami tidak sekadar membuat website; kami merancang ekosistem perangkat lunak yang disesuaikan sepenuhnya dengan alur kerja unik perusahaan Anda. Dengan memadukan teknologi modern-stack yang cepat dan estetika desain yang minimalis, kami memastikan bisnis Anda tidak hanya tampil profesional, tetapi juga mampu beroperasi dengan efisiensi maksimal. Mari diskusikan ide Anda dan bangun masa depan digital bisnis Anda bersama kami hari ini.",
+    subtitle: "Kami merancang ekosistem digital presisi yang disesuaikan dengan alur kerja bisnis Anda. Cepat, minimalis, dan siap memaksimalkan efisiensi operasi.",
     consultation: "Konsultasi Gratis Sekarang"
   },
   home: {
