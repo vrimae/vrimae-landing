@@ -254,6 +254,64 @@ a {
   background-size: 24px 24px;
 }
 
+/* Hero Glow behind text */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 70%);
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Floating Questions */
+.floating-questions-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-question {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  animation: float-question 12s infinite alternate ease-in-out;
+}
+
+.fq-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.fq-2 { top: 22%; right: 12%; animation-delay: -3s; }
+.fq-3 { top: 55%; left: 8%; animation-delay: -7s; }
+.fq-4 { top: 60%; right: 10%; animation-delay: -10s; }
+.fq-5 { top: 35%; left: -2%; animation-delay: -5s; }
+
+@keyframes float-question {
+  0% { transform: translate(0, 0) rotate(-2deg); }
+  50% { transform: translate(20px, -15px) rotate(1deg); }
+  100% { transform: translate(-10px, 15px) rotate(-1deg); }
+}
+
+@media (max-width: 1024px) {
+  .floating-questions-container {
+    display: none; /* Hide on smaller screens to avoid clutter */
+  }
+}
+
 
 
 .hero-content {

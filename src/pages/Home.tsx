@@ -28,6 +28,18 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="hero">
+        {/* Background Glow */}
+        <div className="hero-glow"></div>
+
+        {/* Floating Questions */}
+        <div className="floating-questions-container">
+          <div className="floating-question fq-1">Bagaimana cara ningkatin konversi?</div>
+          <div className="floating-question fq-2">Butuh website perusahaan yang cepat?</div>
+          <div className="floating-question fq-3">Otomatisasi alur kerja bisnis</div>
+          <div className="floating-question fq-4">Integrasi sistem pembayaran?</div>
+          <div className="floating-question fq-5">Tingkatkan SEO website</div>
+        </div>
+
         <motion.div 
           className="hero-content text-glow-wrapper"
           initial="hidden"
