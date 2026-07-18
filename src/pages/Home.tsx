@@ -7,8 +7,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 // Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } }
+  hidden: { opacity: 0, y: 40, filter: 'blur(8px)' },
+  visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } }
 };
 
 const staggerContainer = {
@@ -16,7 +16,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.2
     }
   }
 };
