@@ -32,6 +32,7 @@ export default function Home() {
           <div className="aurora-line aurora-1"></div>
           <div className="aurora-line aurora-2"></div>
           <div className="aurora-line aurora-3"></div>
+          <div className="aurora-line aurora-4"></div>
         </div>
         <motion.div 
           className="hero-content text-glow-wrapper"
