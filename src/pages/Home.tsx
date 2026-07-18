@@ -31,7 +31,7 @@ export default function Home() {
         <div className="hero-background">
         </div>
         <motion.div 
-          className="hero-content"
+          className="hero-content text-glow-wrapper"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}

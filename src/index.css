@@ -252,8 +252,6 @@ a {
   overflow: hidden;
   background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
   background-size: 24px 24px;
-  mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
-  -webkit-mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
 }
 
 
@@ -266,6 +264,28 @@ a {
   align-items: center;
   text-align: center;
   z-index: 1;
+}
+
+.text-glow-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.text-glow-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140vw;
+  height: 180%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 20%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 80%);
+  z-index: -1;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
 
 .badge {

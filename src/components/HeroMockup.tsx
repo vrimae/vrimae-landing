@@ -5,7 +5,7 @@ export default function HeroMockup() {
   const { t } = useLanguage();
 
   return (
-    <div style={{ maxWidth: '800px', margin: '8rem auto 4rem', textAlign: 'center' }}>
+    <div className="text-glow-wrapper" style={{ maxWidth: '800px', margin: '8rem auto 4rem', textAlign: 'center' }}>
       
       <h2 style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '1rem', lineHeight: 1.2 }}>
         {t('mockup.title')}
