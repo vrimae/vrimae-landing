@@ -291,19 +291,19 @@ a {
   color: var(--color-text-muted);
   font-weight: 500;
   white-space: nowrap;
-  animation: float-question 12s infinite alternate ease-in-out;
+  left: 0;
+  will-change: transform;
 }
 
-.fq-1 { top: 15%; left: 10%; animation-delay: 0s; }
-.fq-2 { top: 22%; right: 12%; animation-delay: -3s; }
-.fq-3 { top: 55%; left: 8%; animation-delay: -7s; }
-.fq-4 { top: 60%; right: 10%; animation-delay: -10s; }
-.fq-5 { top: 35%; left: -2%; animation-delay: -5s; }
+.fq-1 { top: 15%; animation: scroll-left 30s linear infinite; animation-delay: 0s; }
+.fq-2 { top: 22%; animation: scroll-left 35s linear infinite; animation-delay: -12s; }
+.fq-3 { top: 55%; animation: scroll-left 28s linear infinite; animation-delay: -5s; }
+.fq-4 { top: 60%; animation: scroll-left 38s linear infinite; animation-delay: -18s; }
+.fq-5 { top: 35%; animation: scroll-left 25s linear infinite; animation-delay: -2s; }
 
-@keyframes float-question {
-  0% { transform: translate(0, 0) rotate(-2deg); }
-  50% { transform: translate(20px, -15px) rotate(1deg); }
-  100% { transform: translate(-10px, 15px) rotate(-1deg); }
+@keyframes scroll-left {
+  0% { transform: translateX(120vw); }
+  100% { transform: translateX(-50vw); }
 }
 
 @media (max-width: 1024px) {
