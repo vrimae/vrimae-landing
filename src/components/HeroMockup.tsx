@@ -1,184 +1,43 @@
 import { CheckCircle2, Layout } from 'lucide-react';
-import { useEffect, useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HeroMockup() {
-  const [isIframe, setIsIframe] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const { t } = useLanguage();
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (window !== window.parent) {
-        setIsIframe(true);
-      }
-      
-      const checkMobile = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-    }
-  }, []);
-
-  if (isIframe) return <div style={{padding: '2rem', color: 'transparent'}}>Mockup Placeholder</div>;
-
   return (
-    <div className="bento-container fade-in-up" style={{ marginTop: '2rem' }}>
+    <div style={{ marginTop: '4rem', marginBottom: '4rem', maxWidth: '800px', margin: '4rem auto 0', textAlign: 'center' }}>
       
-      {/* Top Large Card */}
-      <div className="bento-card bento-top">
-        <div className="bento-content">
-          <h2 className="bento-title">{t('mockup.title')}</h2>
-          <p className="bento-subtitle" style={{marginBottom: '1rem'}}>{t('mockup.subtitle')}</p>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }} dangerouslySetInnerHTML={{ __html: t('mockup.desc').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>') }} />
-          
-          <div className="bento-features">
-            <div className="bento-badge">
-              <CheckCircle2 size={16} color="#10b981" />
-              <span>{t('mockup.badge_1')}</span>
-            </div>
-            <div className="bento-badge">
-              <CheckCircle2 size={16} color="#10b981" />
-              <span>{t('mockup.badge_2')}</span>
-            </div>
-            <div className="bento-badge">
-              <CheckCircle2 size={16} color="#10b981" />
-              <span>{t('mockup.badge_3')}</span>
-            </div>
-            <div className="bento-badge" style={{ marginTop: '0.5rem', borderColor: '#38bdf8' }}>
-              <Layout size={16} color="#38bdf8" />
-              <span style={{ color: '#38bdf8' }}>{t('mockup.badge_4')}</span>
-            </div>
-          </div>
+      <h2 style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '1rem', lineHeight: 1.2 }}>
+        {t('mockup.title')}
+      </h2>
+      
+      <p style={{ fontSize: '1.25rem', color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
+        {t('mockup.subtitle')}
+      </p>
+      
+      <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '3rem', maxWidth: '650px', marginLeft: 'auto', marginRight: 'auto' }} 
+         dangerouslySetInnerHTML={{ __html: t('mockup.desc').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>') }} 
+      />
+      
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#ffffff', padding: '0.6rem 1.2rem', borderRadius: '30px', color: 'var(--color-text)', fontSize: '0.95rem', border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <CheckCircle2 size={16} color="#2563eb" />
+          <span>{t('mockup.badge_1')}</span>
         </div>
-
-        {/* 3D Dual Mac Mockup */}
-        <div className="mac-scene">
-          
-          {/* Mac 1 (Website) - Left */}
-          <div className="laptop-3d left">
-            <div className="laptop-base">
-              <div className="laptop-keyboard"></div>
-              <div className="laptop-trackpad"></div>
-            </div>
-            <div className="laptop-lid">
-              <div className="laptop-screen-inner">
-                {!isMobile ? (
-                  <iframe 
-                    className="mockup-iframe"
-                    src="/" 
-                    scrolling="no"
-                    style={{ background: '#f8fafc' }}
-                  />
-                ) : (
-                  <div className="mini-website-mockup" style={{ width: '100%', height: '100%', transform: 'scale(0.8)', transformOrigin: 'top left' }}>
-                    <div className="mw-header">
-                      <div className="mw-dot" style={{background: '#ef4444'}}></div>
-                      <div className="mw-dot" style={{background: '#f59e0b'}}></div>
-                      <div className="mw-dot" style={{background: '#10b981'}}></div>
-                    </div>
-                    <div className="mw-hero" style={{background: 'linear-gradient(135deg, #1e1b4b, #312e81)'}}>
-                      <div className="mw-title"></div>
-                      <div className="mw-sub"></div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Mac 2 (POS Dashboard) - Right */}
-          <div className="laptop-3d right">
-            <div className="laptop-base">
-              <div className="laptop-keyboard"></div>
-              <div className="laptop-trackpad"></div>
-            </div>
-            <div className="laptop-lid">
-              <div className="laptop-screen-inner">
-                {!isMobile ? (
-                  <iframe 
-                    className="mockup-iframe"
-                    src="https://matcha-saas-demo.vercel.app/" 
-                    scrolling="no"
-                    style={{ background: '#030014' }}
-                  />
-                ) : (
-                  <div className="mini-pos-mockup" style={{ width: '100%', height: '100%', transform: 'scale(0.8)', transformOrigin: 'top right' }}>
-                    <div className="mw-header">
-                      <div className="mw-dot" style={{background: '#ef4444'}}></div>
-                      <div className="mw-dot" style={{background: '#f59e0b'}}></div>
-                      <div className="mw-dot" style={{background: '#10b981'}}></div>
-                    </div>
-                    <div className="mp-layout">
-                        <div className="mp-sidebar" style={{width: '30%'}}>
-                           <div className="mp-sb-item active"></div>
-                           <div className="mp-sb-item"></div>
-                        </div>
-                        <div className="mp-main">
-                           <div className="mp-grid" style={{gridTemplateColumns: '1fr'}}>
-                              <div className="mp-card" style={{height: '20px'}}></div>
-                              <div className="mp-card" style={{height: '20px'}}></div>
-                           </div>
-                        </div>
-                      </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#ffffff', padding: '0.6rem 1.2rem', borderRadius: '30px', color: 'var(--color-text)', fontSize: '0.95rem', border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <CheckCircle2 size={16} color="#2563eb" />
+          <span>{t('mockup.badge_2')}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#ffffff', padding: '0.6rem 1.2rem', borderRadius: '30px', color: 'var(--color-text)', fontSize: '0.95rem', border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+          <CheckCircle2 size={16} color="#2563eb" />
+          <span>{t('mockup.badge_3')}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(37, 99, 235, 0.05)', padding: '0.6rem 1.2rem', borderRadius: '30px', color: '#2563eb', fontSize: '0.95rem', border: '1px solid rgba(37, 99, 235, 0.2)' }}>
+          <Layout size={16} color="#2563eb" />
+          <span style={{ fontWeight: 500 }}>{t('mockup.badge_4')}</span>
         </div>
       </div>
-
-      {/* Bottom Cards */}
-      <div className="bento-bottom">
-        <div className="bento-card bento-small-card">
-          <h3>{t('mockup.badge_1')}</h3>
-          <p>Desain khusus yang disesuaikan dengan identitas brand Anda, cepat dan memukau.</p>
-          <div className="bento-small-graphic">
-             <div className="mini-website-mockup" style={{ transform: 'scale(1.2) translateY(20px)', transformOrigin: 'top left' }}>
-                <div className="mw-header">
-                  <div className="mw-dot" style={{background: '#ef4444'}}></div>
-                  <div className="mw-dot" style={{background: '#f59e0b'}}></div>
-                  <div className="mw-dot" style={{background: '#10b981'}}></div>
-                </div>
-                <div className="mw-hero" style={{background: 'linear-gradient(135deg, #1e1b4b, #312e81)'}}>
-                  <div className="mw-title"></div>
-                  <div className="mw-sub"></div>
-                </div>
-             </div>
-          </div>
-        </div>
-        
-        <div className="bento-card bento-small-card">
-          <h3>{t('mockup.badge_2')}</h3>
-          <p>Kelola transaksi, inventori, dan analitik dalam satu dashboard terpadu.</p>
-          <div className="bento-small-graphic">
-             <div className="mini-pos-mockup" style={{ transform: 'scale(1.2) translateY(20px)', transformOrigin: 'top right' }}>
-                <div className="mw-header">
-                  <div className="mw-dot" style={{background: '#ef4444'}}></div>
-                  <div className="mw-dot" style={{background: '#f59e0b'}}></div>
-                  <div className="mw-dot" style={{background: '#10b981'}}></div>
-                </div>
-                <div className="mp-layout">
-                    <div className="mp-sidebar" style={{width: '30%'}}>
-                       <div className="mp-sb-item active"></div>
-                       <div className="mp-sb-item"></div>
-                    </div>
-                    <div className="mp-main">
-                       <div className="mp-grid" style={{gridTemplateColumns: '1fr'}}>
-                          <div className="mp-card" style={{height: '20px'}}></div>
-                          <div className="mp-card" style={{height: '20px'}}></div>
-                       </div>
-                    </div>
-                  </div>
-             </div>
-          </div>
-        </div>
-      </div>
-
+      
     </div>
   );
 }
