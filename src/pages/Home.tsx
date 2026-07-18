@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero" style={{ paddingTop: 'var(--space-xl)', paddingBottom: 'var(--space-lg)' }}>
+      <section className="hero">
         <div className="hero-background">
         </div>
         <motion.div 
