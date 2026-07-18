@@ -264,6 +264,13 @@ a {
   will-change: transform, opacity;
 }
 
+/* Extreme optimization for low-end mobile devices */
+@media (max-width: 768px) {
+  .aurora-line {
+    display: none; /* Completely remove heavy animated blurs and blend modes */
+  }
+}
+
 .aurora-1 {
   background: linear-gradient(90deg, #8b5cf6, #c084fc);
   width: 60%;
