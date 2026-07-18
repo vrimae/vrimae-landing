@@ -103,7 +103,7 @@ export default function Layout() {
             </div>
             <a href="https://matcha-saas-demo.vercel.app" className="btn btn-outline hide-on-mobile" target="_blank" rel="noreferrer">{t('navbar.demo_btn')}</a>
             <button 
-              className="mobile-menu-btn" 
+              className="mobile-menu-btn hide-on-desktop" 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -120,7 +120,7 @@ export default function Layout() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="mobile-nav-dropdown"
+            className="mobile-nav-dropdown hide-on-desktop"
             style={{
               position: 'fixed',
               top: '5rem',
