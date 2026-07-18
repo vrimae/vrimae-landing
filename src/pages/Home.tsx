@@ -38,10 +38,7 @@ export default function Home() {
           animate="visible"
           variants={staggerContainer}
         >
-          <motion.div className="badge" variants={fadeInUp}>
-            <Star className="icon-small" />
-            <span>{t('hero.badge')}</span>
-          </motion.div>
+
           <motion.h1 className="hero-title" variants={fadeInUp}>
             {t('hero.title_1')} <br />
             <span className="text-gradient">{t('hero.title_2')}</span>
@@ -153,7 +150,7 @@ export default function Home() {
         <div className="trial-glow" />
         <div className="trial-inner">
           <motion.div className="trial-text" variants={fadeInUp}>
-            <span className="trial-badge">{t('home.portfolio_badge')}</span>
+
             <h2 className="trial-title">
               {t('home.portfolio_title_1')} <span className="text-gradient">{t('home.portfolio_title_2')}</span><br />
               {t('home.portfolio_title_3')}
