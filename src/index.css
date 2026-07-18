@@ -254,6 +254,60 @@ a {
   background-size: 24px 24px;
 }
 
+.aurora-line {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.5;
+  border-radius: 100%;
+  mix-blend-mode: multiply;
+  animation: aurora-flow 15s infinite alternate ease-in-out;
+}
+
+.aurora-1 {
+  background: linear-gradient(90deg, #8b5cf6, #c084fc);
+  width: 60%;
+  height: 15%;
+  top: 10%;
+  left: -10%;
+  transform: rotate(-15deg);
+  animation-delay: 0s;
+}
+
+.aurora-2 {
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  width: 70%;
+  height: 12%;
+  top: 40%;
+  right: -20%;
+  transform: rotate(20deg);
+  animation-delay: -5s;
+}
+
+.aurora-3 {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  width: 50%;
+  height: 18%;
+  bottom: 20%;
+  left: 20%;
+  transform: rotate(-5deg);
+  animation-delay: -10s;
+}
+
+@keyframes aurora-flow {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1) rotate(2deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(15px) scale(0.95) rotate(-2deg);
+    opacity: 0.3;
+  }
+}
+
 
 
 .hero-content {
